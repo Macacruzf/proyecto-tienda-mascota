@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro - PetCare Connect</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/carrito.js" defer></script>
+  <script src="js/validaciones.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="img/logo.png" alt="Logo PetCare" class="logo">
+    <span class="brand-name">PetCare Connect</span>
+  </div>
+  <nav class="menu">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="blog.html">Blog</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="login.html" class="btn-link">Iniciar Sesión</a>
+    <a href="registro.html" class="btn-outline">Registrarse</a>
+  </nav>
+  <a class="cart-link" href="carrito.html">🛒 <span id="cart-count">0</span></a>
+</header>
+<main>
+
+<section class="formulario">
+  <h2>Registro de Usuario</h2>
+  <form id="formRegistro" novalidate>
+    <label for="nombre">Nombre completo</label>
+    <input id="nombre" required maxlength="100" autocomplete="name">
+
+    <label for="correo">Correo</label>
+    <input id="correo" type="email" required maxlength="100" autocomplete="email" placeholder="nombre@duoc.cl">
+
+    <label for="correo2">Confirmar correo</label>
+    <input id="correo2" type="email" required maxlength="100">
+
+    <label for="password">Contraseña (4 a 10 caracteres)</label>
+    <input id="password" type="password" required minlength="4" maxlength="10" autocomplete="new-password">
+
+    <label for="password2">Confirmar contraseña</label>
+    <input id="password2" type="password" required minlength="4" maxlength="10">
+
+    <label for="telefono">Teléfono (opcional)</label>
+    <input id="telefono" type="tel" autocomplete="tel">
+    
+    <label for="region">Región</label>
+    <select id="region" required>
+      <option value="">-- Seleccione --</option>
+      <option>Región Metropolitana</option><option>Valparaíso</option>
+      <option>Biobío</option><option>La Araucanía</option>
+    </select>
+
+    <label for="comuna">Comuna</label>
+    <select id="comuna" required>
+      <option value="">-- Seleccione --</option>
+      <option>Santiago</option><option>Ñuñoa</option>
+      <option>Concepción</option><option>Temuco</option>
+    </select>
+
+    <div class="form-help" id="registroHelp"></div>
+    <button type="submit">Registrar</button>
+  </form>
+</section>
+
+</main>
+<footer class="site-footer">© 2025 PetCare Connect — Proyecto Académico DUOC UC</footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Editar Usuario - Admin</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/admin.js" defer></script>
+</head>
+<body class="admin">
+<header class="adminbar">
+  <h1>Panel de Administración</h1>
+  <nav>
+    <a href="inicio.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="usuarios.html">Usuarios</a>
+    <a href="../index.html">Tienda</a>
+  </nav>
+</header>
+<main>
+
+<section class="formulario">
+  <h2>Editar Usuario</h2>
+  <form id="formEditarUsuario">
+    <input type="hidden" id="euId">
+    <label>Nombre</label>
+    <input id="euNombre" required>
+    <label>Correo</label>
+    <input id="euCorreo" type="email" required>
+    <label>Rol</label>
+    <select id="euRol" required>
+      <option value="cliente">Cliente</option>
+      <option value="admin">Admin</option>
+    </select>
+    <button type="submit">Actualizar</button>
+  </form>
+</section>
+
+</main>
+<footer class="site-footer">© 2025 PetCare Connect — Admin</footer>
+</body>
+</html>
