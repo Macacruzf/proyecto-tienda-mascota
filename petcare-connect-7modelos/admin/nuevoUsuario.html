@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nuevo Usuario - Admin</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/admin.js" defer></script>
+</head>
+<body class="admin">
+<header class="adminbar">
+  <h1>Panel de Administración</h1>
+  <nav>
+    <a href="inicio.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="usuarios.html">Usuarios</a>
+    <a href="../index.html">Tienda</a>
+  </nav>
+</header>
+<main>
+
+<section class="formulario">
+  <h2>Nuevo Usuario</h2>
+  <form id="formNuevoUsuario">
+    <label>Nombre</label>
+    <input id="nuNombre" required>
+    <label>Correo</label>
+    <input id="nuCorreo" type="email" required>
+    <label>Rol</label>
+    <select id="nuRol" required>
+      <option value="cliente">Cliente</option>
+      <option value="admin">Admin</option>
+    </select>
+    <button type="submit">Guardar</button>
+  </form>
+</section>
+
+</main>
+<footer class="site-footer">© 2025 PetCare Connect — Admin</footer>
+</body>
+</html>
