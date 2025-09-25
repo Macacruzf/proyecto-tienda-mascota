@@ -1,0 +1,60 @@
+<!DOCTYPE html> <!-- Documento en HTML5 -->
+<html lang="es"> <!-- Idioma principal: español -->
+<head>
+  <meta charset="UTF-8"> <!-- Soporte para tildes, ñ y caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Adaptable en móviles -->
+  <title>Nuevo Producto - Admin</title> <!-- Título en la pestaña -->
+
+  <!-- Estilos compartidos del proyecto -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Script admin.js: maneja CRUD de productos y usuarios -->
+  <script src="../js/admin.js" defer></script>
+  <!-- ⚡ defer asegura que se ejecute cuando cargue el HTML -->
+</head>
+
+<!-- Clase "admin" marca que estamos en la sección administrativa -->
+<body class="admin">
+
+<!-- HEADER del panel -->
+<header class="adminbar">
+  <h1>Panel de Administración</h1>
+  <nav>
+    <a href="inicio.html">Inicio</a> <!-- Página principal del panel -->
+    <a href="productos.html">Productos</a> <!-- Gestión de productos -->
+    <a href="usuarios.html">Usuarios</a> <!-- Gestión de usuarios -->
+    <a href="../index.html">Tienda</a> <!-- Regreso a la tienda pública -->
+  </nav>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+<section class="formulario"> <!-- Caja blanca con estilos de formulario -->
+  <h2>Nuevo Producto</h2>
+
+  <!-- Formulario para añadir producto -->
+  <form id="formNuevoProducto">
+    <!-- Campo Nombre -->
+    <label>Nombre</label>
+    <input id="npNombre" required> <!-- Campo obligatorio -->
+
+    <!-- Campo Precio -->
+    <label>Precio</label>
+    <input id="npPrecio" type="number" min="0" required> <!-- Solo números, mínimo 0 -->
+
+    <!-- Campo Imagen -->
+    <label>Imagen (ruta)</label>
+    <input id="npImagen" placeholder="img/prod10.jpg"> <!-- Ruta de la imagen opcional -->
+
+    <!-- Botón Guardar -->
+    <button type="submit">Guardar</button>
+  </form>
+</section>
+</main>
+
+<!-- PIE DE PÁGINA -->
+<footer class="site-footer">
+  © 2025 PetCare Connect — Admin
+</footer>
+</body>
+</html>

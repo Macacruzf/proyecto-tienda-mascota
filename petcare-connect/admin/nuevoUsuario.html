@@ -1,0 +1,63 @@
+<!DOCTYPE html> <!-- Documento en formato HTML5 -->
+<html lang="es"> <!-- Idioma español -->
+<head>
+  <meta charset="UTF-8"> <!-- Permite usar ñ, tildes y caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Diseño responsive -->
+  <title>Nuevo Usuario - Admin</title> <!-- Texto en la pestaña del navegador -->
+
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Script de administración (maneja usuarios y productos en LocalStorage) -->
+  <script src="../js/admin.js" defer></script>
+  <!-- ⚡ "defer" asegura que el script se ejecute solo cuando el HTML ya cargó -->
+</head>
+
+<!-- Clase admin = estilos y validación propia del panel -->
+<body class="admin">
+
+<!-- HEADER del panel -->
+<header class="adminbar">
+  <h1>Panel de Administración</h1>
+  <nav>
+    <a href="inicio.html">Inicio</a> <!-- Página principal del panel -->
+    <a href="productos.html">Productos</a> <!-- Gestión de productos -->
+    <a href="usuarios.html">Usuarios</a> <!-- Lista de usuarios -->
+    <a href="../index.html">Tienda</a> <!-- Vuelve a la tienda pública -->
+  </nav>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+<section class="formulario"> <!-- Caja blanca con estilo de formulario -->
+  <h2>Nuevo Usuario</h2>
+
+  <!-- Formulario para añadir usuario -->
+  <form id="formNuevoUsuario">
+    <!-- Campo Nombre -->
+    <label>Nombre</label>
+    <input id="nuNombre" required>
+
+    <!-- Campo Correo -->
+    <label>Correo</label>
+    <input id="nuCorreo" type="email" required>
+
+    <!-- Campo Rol -->
+    <label>Rol</label>
+    <select id="nuRol" required>
+      <option value="cliente">Cliente</option> <!-- Usuario normal -->
+      <option value="admin">Admin</option> <!-- Usuario administrador -->
+    </select>
+
+    <!-- Botón para guardar -->
+    <button type="submit">Guardar</button>
+  </form>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  © 2025 PetCare Connect — Admin
+</footer>
+</body>
+</html>

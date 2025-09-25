@@ -1,0 +1,71 @@
+<!DOCTYPE html> <!-- Documento en formato HTML5 -->
+<html lang="es"> <!-- Idioma español -->
+<head>
+  <meta charset="UTF-8"> <!-- Acepta tildes y ñ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive -->
+  <title>Método de Pago - PetCare Connect</title>
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Scripts necesarios -->
+  <script src="js/carrito.js" defer></script>      <!-- Maneja carrito -->
+  <script src="js/validaciones.js" defer></script> <!-- Donde está toast() -->
+  <script src="js/pago.js" defer></script>         <!-- Lógica del pago -->
+</head>
+<body>
+<!-- ENCABEZADO -->
+<header class="topbar">
+  <div class="brand">
+    <img src="img/logo.png" alt="Logo PetCare" class="logo">
+    <span class="brand-name">PetCare Connect</span>
+  </div>
+  <nav class="menu">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="carrito.html">Carrito</a>
+  </nav>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+  <section class="formulario">
+    <h2>Selecciona tu método de pago</h2>
+
+    <!-- Formulario con radios -->
+    <form id="formPago" class="opciones-pago">
+      <label>
+        <input type="radio" name="metodo" value="Débito" required>
+        Tarjeta Débito
+      </label>
+      <label>
+        <input type="radio" name="metodo" value="Crédito">
+        Tarjeta Crédito
+      </label>
+      <label>
+        <input type="radio" name="metodo" value="Transferencia">
+        Transferencia Bancaria
+      </label>
+      <label>
+        <input type="radio" name="metodo" value="Efectivo">
+        Pago en Efectivo
+      </label>
+
+      <!-- Botón -->
+      <button type="submit">Confirmar Pago</button>
+    </form>
+
+    <!-- Mensajes de error -->
+    <div id="mensajePago" class="form-help"></div>
+  </section>
+</main>
+
+<!-- PIE DE PÁGINA -->
+<footer class="site-footer">
+  © 2025 PetCare Connect — Proyecto Académico DUOC UC
+</footer>
+
+<!-- Contenedor de toast -->
+<div id="toast" class="toast"></div>
+</body>
+</html>

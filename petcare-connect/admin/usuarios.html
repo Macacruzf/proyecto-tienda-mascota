@@ -1,0 +1,58 @@
+<!DOCTYPE html> <!-- Documento en HTML5 -->
+<html lang="es"> <!-- Idioma español -->
+<head>
+  <meta charset="UTF-8"> <!-- Soporte para ñ y tildes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive en móviles -->
+  <title>Usuarios - Admin</title> <!-- Título de la pestaña -->
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Script de administración (maneja usuarios y productos en localStorage) -->
+  <script src="../js/admin.js" defer></script>
+</head>
+
+<body class="admin"> <!-- Clase "admin" indica que esta página es del panel -->
+<!-- BARRA SUPERIOR DE ADMIN -->
+<header class="adminbar">
+  <h1>Panel de Administración</h1> <!-- Título -->
+  <nav> <!-- Menú de navegación -->
+    <a href="inicio.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="usuarios.html">Usuarios</a> <!-- Página actual -->
+    <a href="../index.html">Tienda</a> <!-- Regresa a la tienda pública -->
+  </nav>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+<section>
+  <h2>Gestión de Usuarios</h2> <!-- Título de sección -->
+
+  <!-- Barra con acciones -->
+  <div class="toolbar">
+    <a class="btn" href="nuevoUsuario.html">Añadir Usuario</a> <!-- Botón para crear usuario -->
+  </div>
+
+  <!-- Tabla dinámica de usuarios -->
+  <table class="tabla" id="tablaUsuarios">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Rol</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody> <!-- ⚡ Aquí JS inyecta filas con usuarios -->
+  </table>
+</section>
+</main>
+
+<!-- PIE DE PÁGINA -->
+<footer class="site-footer">
+  © 2025 PetCare Connect — Admin
+</footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html> <!-- Documento en formato HTML5 -->
+<html lang="es"> <!-- Idioma del documento: español -->
+<head>
+  <meta charset="UTF-8"> <!-- Permite caracteres especiales (ñ, tildes, etc.) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Diseño adaptable en móviles -->
+  <title>Detalle Comiendo - PetCare Connect</title> <!-- Título de la pestaña del navegador -->
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Scripts -->
+  <script src="js/carrito.js" defer></script> <!-- Lógica del carrito -->
+  <script src="js/validaciones.js" defer></script> <!-- Validaciones de formularios -->
+</head>
+
+<body>
+<!-- ENCABEZADO -->
+<header class="topbar"> <!-- Barra superior -->
+  <div class="brand"> <!-- Logo + nombre de la marca -->
+    <img src="img/logo.png" alt="Logo PetCare" class="logo"> <!-- Imagen del logo -->
+    <span class="brand-name">PetCare Connect</span> <!-- Texto con el nombre -->
+  </div>
+
+  <!-- Menú de navegación -->
+  <nav class="menu">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="blog.html">Blog</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="login.html" class="btn-link">Iniciar Sesión</a>
+    <a href="registro.html" class="btn-outline">Registrarse</a>
+  </nav>
+
+  <!-- Carrito -->
+  <a class="cart-link" href="carrito.html"> <!-- Enlace al carrito -->
+    🛒 <span id="cart-count">0</span> <!-- Icono carrito + contador -->
+  </a>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+  <!-- ARTÍCULO DEL BLOG -->
+  <article class="blog-detalle"> <!-- Entrada individual del blog -->
+    <h2>Nutrición para una vida saludable</h2> <!-- Título del artículo -->
+    <img src="img/comiendo.jpg" alt="Nutrición de mascotas"> <!-- Imagen ilustrativa -->
+    <p>
+      Elige alimentos balanceados y adecuados a la edad, tamaño y condición de tu mascota.
+      El agua fresca y el ejercicio complementan una buena dieta.
+    </p> <!-- Texto descriptivo -->
+  </article>
+</main>
+
+<!-- PIE DE PÁGINA -->
+<footer class="site-footer"> <!-- Pie de página -->
+  © 2025 PetCare Connect — Proyecto Académico DUOC UC
+</footer>
+</body>
+</html>

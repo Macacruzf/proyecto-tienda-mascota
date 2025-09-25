@@ -1,0 +1,76 @@
+<!DOCTYPE html> <!-- Documento en formato HTML5 -->
+<html lang="es"> <!-- Idioma principal: español -->
+<head>
+  <meta charset="UTF-8"> <!-- Soporte para ñ y tildes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Hace la web responsive -->
+  <title>Productos - Admin</title> <!-- Texto que aparece en la pestaña del navegador -->
+
+  <!-- Importa los estilos generales del proyecto -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Importa el archivo admin.js que maneja productos y usuarios -->
+  <script src="../js/admin.js" defer></script>
+  <!-- ⚡ "defer" hace que el script se ejecute después de que cargue el HTML -->
+</head>
+
+<!-- Clase "admin" indica que esta página es parte del panel de administración -->
+<body class="admin">
+
+<!-- HEADER del panel admin -->
+<header class="adminbar">
+  <h1>Panel de Administración</h1> <!-- Título fijo en todas las páginas de admin -->
+  <nav> <!-- Menú de navegación interno -->
+    <a href="inicio.html">Inicio</a> <!-- Enlace al inicio del panel -->
+    <a href="productos.html">Productos</a> <!-- Página actual (gestión de productos) -->
+    <a href="usuarios.html">Usuarios</a> <!-- Enlace a la gestión de usuarios -->
+    <a href="../index.html">Tienda</a> <!-- Enlace de regreso a la tienda pública -->
+  </nav>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+<section>
+  <h2>Gestión de Productos</h2> <!-- Título de la sección -->
+
+  <!-- Barra de herramientas arriba de la tabla -->
+  <div class="toolbar">
+    <!-- Botón para ir al formulario y crear un nuevo producto -->
+    <a class="btn" href="nuevoProducto.html">Añadir Producto</a>
+  </div>
+
+  <!-- Tabla de productos -->
+  <table class="tabla" id="tablaProductos">
+    <!-- Cabecera de la tabla -->
+    <thead>
+      <tr>
+        <th>ID</th> <!-- Identificador único del producto -->
+        <th>Nombre</th> <!-- Nombre del producto -->
+        <th>Precio</th> <!-- Precio unitario -->
+        <th>Acciones</th> <!-- Botones de editar/eliminar -->
+      </tr>
+    </thead>
+
+    <!-- Cuerpo de la tabla vacío -->
+    <tbody></tbody>
+    <!-- ⚡ Aquí se insertan dinámicamente las filas de productos usando admin.js -->
+    <!-- Ejemplo de cómo quedará:
+      <tr>
+        <td>1</td>
+        <td>Collar de Perro</td>
+        <td>$9.990</td>
+        <td>
+          <a href="editarProducto.html?id=1">Editar</a> |
+          <a href="#" onclick="delProducto(1);return false;">Eliminar</a>
+        </td>
+      </tr>
+    -->
+  </table>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  © 2025 PetCare Connect — Admin
+</footer>
+</body>
+</html>

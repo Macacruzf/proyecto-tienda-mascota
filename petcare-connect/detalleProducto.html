@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head>
+  <meta charset="UTF-8"> <!-- Permite usar caracteres especiales (ñ, tildes, etc.) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Hace la página responsive -->
+  <title>Detalle de Producto - PetCare Connect</title> <!-- Título de la pestaña -->
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Script del carrito (para añadir productos desde esta página) -->
+  <script src="js/carrito.js" defer></script>
+</head>
+
+<body>
+<!-- ENCABEZADO -->
+<header class="topbar"> <!-- Barra superior -->
+  <div class="brand"> <!-- Contenedor con logo y nombre -->
+    <img src="img/logo.png" alt="Logo PetCare" class="logo"> <!-- Logo -->
+    <span class="brand-name">PetCare Connect</span> <!-- Texto de la marca -->
+  </div>
+
+  <!-- Menú de navegación -->
+  <nav class="menu">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="blog.html">Blog</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <!-- Carrito -->
+  <a class="cart-link" href="carrito.html"> 🛒 <span id="cart-count">0</span></a>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+  <!-- SECCIÓN DE DETALLE DEL PRODUCTO -->
+  <section id="detalle-root" class="detalle-producto"> <!-- Contenedor principal -->
+    
+    <!-- Columna con imagen principal y miniaturas -->
+    <div class="detalle-imagen">
+      <img id="detalle-img" src="" alt="Imagen del producto"> <!-- Imagen grande -->
+      <div class="miniaturas" id="miniaturas"></div> <!-- Aquí se cargarán miniaturas del producto -->
+    </div>
+
+    <!-- Columna con la info del producto -->
+    <div class="detalle-info">
+      <h2 id="detalle-nombre"></h2> <!-- Nombre dinámico del producto -->
+      <p class="price" id="detalle-precio"></p> <!-- Precio dinámico -->
+      <p id="detalle-descripcion"></p> <!-- Descripción del producto -->
+      
+      <!-- Selección de cantidad -->
+      <label for="cantidad">Cantidad</label>
+      <input id="cantidad" type="number" min="1" value="1"> <!-- Input numérico para elegir cuántos comprar -->
+      
+      <!-- Botón para agregar el producto al carrito -->
+      <button id="btn-add">Añadir al carrito</button>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE PRODUCTOS RELACIONADOS -->
+  <section class="relacionados">
+    <h3>Productos Relacionados</h3> <!-- Título de sección -->
+    <div class="grid-productos" id="relacionados"></div> <!-- Aquí se cargarán productos similares -->
+  </section>
+</main>
+
+<!-- PIE DE PÁGINA -->
+<footer class="site-footer">
+  © 2025 PetCare Connect — Proyecto Académico DUOC UC
+</footer>
+</body>
+</html>

@@ -1,0 +1,399 @@
+:root {
+  /* Variables reutilizables en el CSS */
+  --green: #4CAF50;        /* Verde principal */
+  --green-700: #388e3c;    /* Verde más oscuro (hover) */
+  --bg: #f5f7f8;           /* Fondo general de la página */
+  --card: #ffffff;         /* Fondo de tarjetas */
+  --text: #333;            /* Color de texto principal */
+}
+
+/* ---------- AJUSTES GLOBALES ---------- */
+* {
+  box-sizing: border-box; /* Incluye padding y borde en el cálculo del ancho total */
+}
+
+body {
+  margin: 0; /* Quita márgenes por defecto */
+  font-family: system-ui, Segoe UI, Roboto, Arial, sans-serif; /* Tipografía */
+  background: var(--bg); /* Color de fondo de la página */
+  color: var(--text); /* Color del texto */
+}
+
+a {
+  color: inherit; /* Hereda el color del padre */
+}
+
+img {
+  max-width: 100%; /* La imagen nunca supera el ancho de su contenedor */
+  display: block; /* Elimina el espacio extra debajo de las imágenes */
+}
+
+/* ---------- HEADER ---------- */
+.topbar {
+  display: flex; /* Pone los elementos en fila */
+  gap: 16px; /* Espacio entre elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: space-between; /* Espacia logo, menú y carrito */
+  background: var(--green); /* Fondo verde */
+  color: #fff; /* Texto blanco */
+  padding: 10px 16px; /* Espaciado interno */
+  position: sticky; /* Se mantiene fijo arriba */
+  top: 0; /* Desde arriba */
+}
+
+.brand {
+  display: flex; /* Logo + texto en fila */
+  align-items: center; /* Centrado vertical */
+  gap: 8px; /* Espacio entre logo y nombre */
+}
+
+.logo {
+  width: 44px; /* Ancho fijo */
+  height: 44px; /* Alto fijo */
+  border-radius: 8px; /* Bordes redondeados */
+  background: #fff; /* Fondo blanco */
+  object-fit: cover; /* Ajusta imagen sin deformar */
+}
+
+.brand-name {
+  font-weight: 700; /* Texto en negrita */
+}
+
+.menu a {
+  margin: 0 8px; /* Espaciado horizontal */
+  color: #fff; /* Texto blanco */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.menu .btn-link {
+  padding: 6px 10px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  background: rgba(255, 255, 255, .15); /* Fondo semitransparente */
+}
+
+.btn-outline {
+  border: 2px solid var(--green); /* Borde verde */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px 16px; /* Espaciado interno */
+  color: var(--green); /* Texto verde */
+  background: transparent; /* Fondo transparente */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Permite paddings/margins */
+  transition: 0.2s ease; /* Transición suave */
+}
+
+.btn-outline:hover {
+  background: var(--green); /* Fondo verde */
+  color: #fff; /* Texto blanco */
+}
+
+.cart-link {
+  color: #fff; /* Texto blanco */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: 700; /* Texto en negrita */
+}
+
+/* ---------- HERO (banner principal) ---------- */
+.hero {
+  display: grid; /* Usa cuadrícula */
+  grid-template-columns: 1.2fr 1fr; /* Dos columnas: texto + imagen */
+  gap: 24px; /* Espacio entre columnas */
+  align-items: center; /* Centra verticalmente */
+  padding: 24px; /* Espaciado interno */
+  max-width: 1100px; /* Máximo ancho */
+  margin: 0 auto; /* Centrado horizontal */
+}
+
+.hero-img {
+  height: 300px; /* Altura fija */
+  border-radius: 18px; /* Bordes redondeados */
+  background: url("../img/banner.jpg") center/cover no-repeat; /* Imagen de fondo */
+}
+
+.hero-actions {
+  display: flex; /* Botones en fila */
+  gap: 12px; /* Espacio entre botones */
+  margin-top: 12px; /* Separación del texto */
+}
+
+/* ---------- BOTONES ---------- */
+.btn {
+  background: var(--green); /* Fondo verde */
+  border: none; /* Sin borde */
+  color: #fff; /* Texto blanco */
+  text-decoration: none; /* Sin subrayado */
+  padding: 10px 16px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  display: inline-block; /* Se comporta como caja */
+}
+
+.btn:hover {
+  background: var(--green-700); /* Fondo verde más oscuro */
+}
+
+.btn.sm {
+  padding: 8px 12px; /* Versión más pequeña */
+}
+
+button.sm {
+  padding: 8px 12px; /* Espaciado */
+  border-radius: 8px; /* Bordes redondeados */
+  border: 1px solid #ddd; /* Borde gris claro */
+  background: #fff; /* Fondo blanco */
+  cursor: pointer; /* Manito al pasar */
+}
+
+button.sm:hover {
+  background: #f0f0f0; /* Fondo gris claro al pasar */
+}
+
+/* ---------- SECCIONES Y PRODUCTOS ---------- */
+.title-center {
+  text-align: center; /* Texto centrado */
+  margin-top: 16px; /* Separación superior */
+}
+
+.grid-productos {
+  display: grid; /* Usa cuadrícula */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Se adapta al espacio */
+  gap: 18px; /* Espacio entre tarjetas */
+  padding: 16px; /* Espaciado interno */
+  max-width: 1100px; /* Máximo ancho */
+  margin: 0 auto; /* Centrado */
+}
+
+.producto {
+  background: var(--card); /* Fondo blanco */
+  border: 1px solid #e5e7eb; /* Borde gris claro */
+  border-radius: 14px; /* Bordes redondeados */
+  padding: 12px; /* Espaciado interno */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .04); /* Sombra suave */
+  text-align: center; /* Texto centrado */
+}
+
+.producto h3,
+.producto h4 {
+  margin: .4rem 0; /* Margen superior/inferior pequeño */
+}
+
+.price {
+  color: var(--green); /* Verde */
+  font-weight: 700; /* Negrita */
+}
+
+.actions {
+  display: flex; /* Botones en fila */
+  gap: 8px; /* Espacio entre botones */
+  flex-wrap: wrap; /* Se acomodan si no caben */
+  justify-content: center; /* Centrado */
+}
+
+.detalle-producto {
+  display: grid; /* Cuadrícula */
+  grid-template-columns: 1fr 1fr; /* Imagen + info */
+  gap: 24px; /* Espacio */
+  max-width: 1000px; /* Máximo ancho */
+  margin: 16px auto; /* Separación y centrado */
+  padding: 0 16px; /* Espaciado horizontal */
+}
+
+.miniaturas {
+  display: flex; /* En fila */
+  gap: 8px; /* Espacio entre imágenes */
+  margin-top: 8px; /* Separación superior */
+}
+
+.detalle-info input {
+  width: 120px; /* Ancho fijo */
+}
+
+/* ---------- PRODUCTOS RELACIONADOS ---------- */
+.relacionados {
+  max-width: 1100px; /* Máximo ancho */
+  margin: 32px auto; /* Separación y centrado */
+  padding: 0 16px; /* Espaciado horizontal */
+}
+
+.relacionados h3 {
+  margin-bottom: 16px; /* Separación inferior */
+  font-size: 1.6rem; /* Tamaño de letra */
+  color: var(--text); /* Color texto */
+  text-align: center; /* Centrado */
+}
+
+.relacionados .grid-productos {
+  display: grid; /* Cuadrícula */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adaptable */
+  gap: 18px; /* Espacio */
+}
+
+/* ---------- FORMULARIOS ---------- */
+.formulario {
+  background: var(--card); /* Fondo blanco */
+  max-width: 520px; /* Ancho máximo */
+  margin: 24px auto; /* Centrado y separación */
+  padding: 20px; /* Espaciado interno */
+  border: 1px solid #e5e7eb; /* Borde gris claro */
+  border-radius: 14px; /* Bordes redondeados */
+}
+
+/* Inputs normales */
+.formulario input:not([type="radio"]):not([type="checkbox"]),
+.formulario select,
+.formulario textarea {
+  width: 100%; /* Ocupan todo el ancho */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #d1d5db; /* Borde gris */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Radios y checkboxes */
+.formulario input[type="radio"],
+.formulario input[type="checkbox"] {
+  width: auto; /* Ancho automático */
+  margin-right: 6px; /* Espacio al texto */
+}
+
+/* Botones dentro de formulario */
+.formulario button {
+  margin-top: 10px; /* Separación arriba */
+  padding: 10px; /* Espaciado */
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Bordes redondeados */
+  background: var(--green); /* Fondo verde */
+  color: white; /* Texto blanco */
+  cursor: pointer; /* Manito al pasar */
+}
+.formulario button:hover {
+  background: var(--green-700); /* Verde oscuro al pasar */
+}
+
+.form-help {
+  color: #d32f2f; /* Texto rojo para errores */
+  font-size: .9rem; /* Tamaño más pequeño */
+  margin-top: 6px; /* Separación arriba */
+  min-height: 1.2rem; /* Reserva espacio aunque no haya texto */
+}
+
+/* Opciones de pago */
+.opciones-pago {
+  display: flex; /* Columna de opciones */
+  flex-direction: column; /* Apiladas */
+  gap: 12px; /* Espacio entre opciones */
+}
+.opciones-pago label {
+  display: inline-flex; /* Input + texto en línea */
+  align-items: center; /* Centrado vertical */
+  gap: 8px; /* Espacio entre radio y texto */
+  cursor: pointer; /* Hace clickeable todo */
+  font-size: 1rem; /* Tamaño de letra */
+}
+
+/* ---------- BLOG ---------- */
+.blog-list {
+  max-width: 1000px; /* Ancho máximo */
+  margin: 0 auto; /* Centrado */
+  padding: 16px; /* Espaciado */
+  display: grid; /* Cuadrícula */
+  gap: 16px; /* Espacio entre items */
+}
+
+.blog-item {
+  display: grid; /* Cuadrícula */
+  grid-template-columns: 1fr 300px; /* Texto + imagen */
+  gap: 16px; /* Espacio */
+  background: var(--card); /* Fondo blanco */
+  padding: 16px; /* Espaciado */
+  border-radius: 14px; /* Bordes redondeados */
+  border: 1px solid #e5e7eb; /* Borde gris */
+}
+
+.blog-detalle {
+  max-width: 800px; /* Ancho máximo */
+  margin: 16px auto; /* Centrado y separación */
+  background: var(--card); /* Fondo blanco */
+  padding: 20px; /* Espaciado */
+  border-radius: 14px; /* Bordes redondeados */
+  border: 1px solid #e5e7eb; /* Borde gris */
+}
+
+/* ---------- NOSOTROS ---------- */
+.about {
+  max-width: 900px; /* Ancho máximo */
+  margin: 16px auto; /* Centrado y separación */
+  padding: 0 16px; /* Espaciado lateral */
+}
+
+.about-img {
+  border-radius: 12px; /* Bordes redondeados */
+  margin: 12px 0; /* Separación vertical */
+}
+
+.equipo {
+  padding-left: 18px; /* Sangría lista */
+}
+
+/* ---------- CARRITO ---------- */
+.carrito-page {
+  max-width: 800px; /* Ancho máximo */
+  margin: 16px auto; /* Centrado y separación */
+  padding: 0 16px; /* Espaciado lateral */
+}
+
+.tabla {
+  width: 100%; /* Ocupa todo el ancho */
+  border-collapse: collapse; /* Une bordes */
+  background: var(--card); /* Fondo blanco */
+  border-radius: 12px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta bordes extra */
+}
+
+.tabla th,
+.tabla td {
+  border: 1px solid #e5e7eb; /* Borde gris */
+  padding: 10px; /* Espaciado interno */
+  text-align: left; /* Texto alineado a la izquierda */
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+  margin-top: 24px; /* Separación superior */
+  background: #111; /* Fondo negro */
+  color: #fff; /* Texto blanco */
+  text-align: center; /* Centrado */
+  padding: 16px; /* Espaciado interno */
+}
+
+/* ---------- RESPONSIVE (móviles) ---------- */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr; /* Pasa a una sola columna */
+  }
+  .detalle-producto {
+    grid-template-columns: 1fr; /* Imagen arriba, texto abajo */
+  }
+  .blog-item {
+    grid-template-columns: 1fr; /* Texto arriba, imagen abajo */
+  }
+}
+
+/* ---------- ADMIN ---------- */
+.adminbar {
+  display: flex; /* Fila */
+  gap: 16px; /* Espacio */
+  justify-content: space-between; /* Separación máxima */
+  align-items: center; /* Centrado vertical */
+  background: #0f172a; /* Fondo azul oscuro */
+  color: #fff; /* Texto blanco */
+  padding: 12px 16px; /* Espaciado */
+}
+
+.admin main {
+  max-width: 1000px; /* Ancho máximo */
+  margin: 0 auto; /* Centrado */
+  padding: 16px; /* Espaciado */
+}
+
+.toolbar {
+  margin: 8px 0; /* Separación vertical */
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html> <!-- Documento en HTML5 -->
+<html lang="es"> <!-- Idioma español -->
+<head>
+  <meta charset="UTF-8"> <!-- Permite tildes y ñ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Diseño responsive -->
+  <title>Editar Usuario - Admin</title> <!-- Título que aparece en la pestaña -->
+
+  <!-- Estilos generales -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Script que maneja la lógica CRUD de admin -->
+  <script src="../js/admin.js" defer></script>
+  <!-- ⚡ defer: asegura que JS se ejecute después de cargar el HTML -->
+</head>
+
+<!-- Clase "admin" aplica estilos y validación del panel -->
+<body class="admin">
+
+<!-- HEADER del panel -->
+<header class="adminbar">
+  <h1>Panel de Administración</h1>
+  <nav>
+    <a href="inicio.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="usuarios.html">Usuarios</a>
+    <a href="../index.html">Tienda</a>
+  </nav>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+<section class="formulario"> <!-- Caja blanca con estilo formulario -->
+  <h2>Editar Usuario</h2>
+
+  <!-- Formulario de edición -->
+  <form id="formEditarUsuario">
+    <!-- Campo oculto: almacena el ID del usuario (para saber a quién actualizar) -->
+    <input type="hidden" id="euId">
+
+    <!-- Campo nombre -->
+    <label>Nombre</label>
+    <input id="euNombre" required>
+
+    <!-- Campo correo -->
+    <label>Correo</label>
+    <input id="euCorreo" type="email" required>
+
+    <!-- Campo rol (cliente o admin) -->
+    <label>Rol</label>
+    <select id="euRol" required>
+      <option value="cliente">Cliente</option>
+      <option value="admin">Admin</option>
+    </select>
+
+    <!-- Botón actualizar -->
+    <button type="submit">Actualizar</button>
+  </form>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-

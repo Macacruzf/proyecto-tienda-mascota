@@ -1,0 +1,39 @@
+<!DOCTYPE html> <!-- Documento en formato HTML5 -->
+<html lang="es"> <!-- Idioma principal: español -->
+<head>
+  <meta charset="UTF-8"> <!-- Soporte para tildes, ñ y caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Diseño adaptable en móviles -->
+  <title>Inicio - Admin</title> <!-- Texto en la pestaña -->
+
+  <!-- Estilos generales del sitio -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Script admin.js (verifica rol admin y maneja la lógica del panel) -->
+  <script src="../js/admin.js" defer></script>
+  <!-- ⚡ defer asegura que se ejecute después de cargar el HTML -->
+</head>
+
+<!-- body con clase "admin" indica que estamos en el panel administrativo -->
+<body class="admin">
+
+<!-- HEADER del panel -->
+<header class="adminbar">
+  <h1>Panel de Administración</h1>
+  <nav>
+    <!-- Menú de navegación interno -->
+    <a href="inicio.html">Inicio</a> <!-- Página actual -->
+    <a href="productos.html">Productos</a> <!-- Gestión de productos -->
+    <a href="usuarios.html">Usuarios</a> <!-- Gestión de usuarios -->
+    <a href="../index.html">Tienda</a> <!-- Regresar a la tienda pública -->
+  </nav>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+<section class="panel-welcome"> <!-- Sección de bienvenida -->
+  <p>Bienvenido/a, Admin. Desde aquí puedes gestionar productos y usuarios.</p>
+  <!-- Texto simple para orientar al administrador -->
+</section>
+</main>
+
+<!

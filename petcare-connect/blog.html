@@ -1,0 +1,76 @@
+<!DOCTYPE html> <!-- Documento en formato HTML5 -->
+<html lang="es"> <!-- Idioma principal español -->
+<head>
+  <meta charset="UTF-8"> <!-- Permite caracteres como ñ y tildes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Diseño adaptable en móviles -->
+  <title>Blog - PetCare Connect</title> <!-- Título de la pestaña -->
+
+  <!-- Archivo de estilos -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Archivos JavaScript -->
+  <script src="js/carrito.js" defer></script> <!-- Script para manejar carrito -->
+  <script src="js/validaciones.js" defer></script> <!-- Script para validaciones -->
+</head>
+
+<body>
+<!-- ENCABEZADO -->
+<header class="topbar"> <!-- Barra superior -->
+  <div class="brand"> <!-- Contenedor logo + nombre -->
+    <img src="img/logo.png" alt="Logo PetCare" class="logo"> <!-- Logo de la tienda -->
+    <span class="brand-name">PetCare Connect</span> <!-- Nombre de la marca -->
+  </div>
+
+  <!-- Menú de navegación -->
+  <nav class="menu">
+    <a href="index.html">Inicio</a> <!-- Link a inicio -->
+    <a href="productos.html">Productos</a> <!-- Link a productos -->
+    <a href="nosotros.html">Nosotros</a> <!-- Link a nosotros -->
+    <a href="blog.html">Blog</a> <!-- Link a blog (actual) -->
+    <a href="contacto.html">Contacto</a> <!-- Link a contacto -->
+    <a href="login.html" class="btn-link">Iniciar Sesión</a> <!-- Link login -->
+    <a href="registro.html" class="btn-outline">Registrarse</a> <!-- Link registro -->
+  </nav>
+
+  <!-- Carrito en header -->
+  <a class="cart-link" href="carrito.html">
+    🛒 <span id="cart-count">0</span> <!-- Ícono de carrito + contador -->
+  </a>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+  <!-- Título principal -->
+  <h2 class="title-center">Noticias Importantes</h2>
+
+  <!-- Lista de artículos del blog -->
+  <section class="blog-list">
+    
+    <!-- Primer artículo -->
+    <article class="blog-item"> <!-- Entrada de blog -->
+      <div class="blog-text"> <!-- Contenedor de texto -->
+        <h3><a href="detalleperritovacu.html">Importancia de las vacunas</a></h3> <!-- Título con enlace al detalle -->
+        <p>Mantener al día las vacunas es vital para la salud de tu mascota...</p> <!-- Resumen del artículo -->
+        <a href="detalleperritovacu.html" class="btn sm">Ver Caso</a> <!-- Botón para leer completo -->
+      </div>
+      <img src="img/perritovacu.jpg" alt="Vacunas"> <!-- Imagen de referencia -->
+    </article>
+
+    <!-- Segundo artículo -->
+    <article class="blog-item">
+      <div class="blog-text">
+        <h3><a href="detallecomiendo.html">Nutrición saludable</a></h3> <!-- Título con enlace -->
+        <p>Una alimentación equilibrada asegura vitalidad y bienestar...</p> <!-- Resumen -->
+        <a href="detallecomiendo.html" class="btn sm">Ver Caso</a> <!-- Botón a detalle -->
+      </div>
+      <img src="img/comiendo.jpg" alt="Nutrición"> <!-- Imagen de referencia -->
+    </article>
+  </section>
+</main>
+
+<!-- PIE DE PÁGINA -->
+<footer class="site-footer">
+  © 2025 PetCare Connect — Proyecto Académico DUOC UC
+</footer>
+</body>
+</html>

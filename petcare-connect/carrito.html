@@ -1,0 +1,66 @@
+<!DOCTYPE html> <!-- Documento en formato HTML5 -->
+<html lang="es"> <!-- Idioma principal español -->
+<head>
+  <meta charset="UTF-8"> <!-- Permite caracteres especiales (ñ, tildes, etc.) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Hace la página responsive -->
+  <title>Carrito - PetCare Connect</title> <!-- Título que se muestra en la pestaña -->
+
+  <!-- Archivo de estilos -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Archivos JavaScript -->
+  <script src="js/carrito.js" defer></script> <!-- Maneja toda la lógica del carrito -->
+  <script src="js/validaciones.js" defer></script> <!-- Valida formularios (aunque aquí no hay) -->
+</head>
+
+<body>
+<!-- ENCABEZADO -->
+<header class="topbar"> <!-- Barra superior -->
+  <div class="brand"> <!-- Logo + nombre -->
+    <img src="img/logo.png" alt="Logo PetCare" class="logo"> <!-- Imagen del logo -->
+    <span class="brand-name">PetCare Connect</span> <!-- Texto con el nombre -->
+  </div>
+
+  <!-- Menú de navegación -->
+  <nav class="menu">
+    <a href="index.html">Inicio</a> <!-- Link a inicio -->
+    <a href="productos.html">Productos</a> <!-- Link a productos -->
+    <a href="nosotros.html">Nosotros</a> <!-- Link a nosotros -->
+    <a href="blog.html">Blog</a> <!-- Link a blog -->
+    <a href="contacto.html">Contacto</a> <!-- Link a contacto -->
+    <a href="login.html" class="btn-link">Iniciar Sesión</a> <!-- Link login -->
+    <a href="registro.html" class="btn-outline">Registrarse</a> <!-- Link registro -->
+  </nav>
+
+  <!-- Carrito en header -->
+  <a class="cart-link" href="carrito.html">
+    🛒 <span id="cart-count">0</span> <!-- Ícono de carrito con contador -->
+  </a>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+<section class="carrito-page"> <!-- Sección exclusiva del carrito -->
+  <h2>Carrito de Compras</h2> <!-- Título -->
+
+  <!-- Aquí se mostrará la lista de productos agregados -->
+  <div id="carrito-list"></div> 
+  <!-- Este div se llena dinámicamente con JS desde carrito.js -->
+
+  <!-- Botón para pasar a la página de pago -->
+  <div class="acciones-carrito">
+    <a href="pago.html" class="btn">Proceder al Pago</a>
+    <!-- Cuando el usuario hace clic aquí, va a la página pago.html -->
+  </div>
+</section>
+</main>
+
+<!-- PIE DE PÁGINA -->
+<footer class="site-footer"> <!-- Pie de página -->
+  © 2025 PetCare Connect — Proyecto Académico DUOC UC
+</footer>
+
+<!-- Contenedor para mostrar mensajes (toast) -->
+<div id="toast" class="toast"></div>
+</body>
+</html>

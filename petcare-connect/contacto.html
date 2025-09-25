@@ -1,0 +1,76 @@
+<!DOCTYPE html> <!-- Documento en formato HTML5 -->
+<html lang="es"> <!-- Idioma principal: español -->
+<head>
+  <meta charset="UTF-8"> <!-- Permite usar tildes y ñ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Diseño adaptable (responsive) -->
+  <title>Contacto - PetCare Connect</title> <!-- Título de la pestaña -->
+
+  <!-- Archivo de estilos -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Archivos JavaScript -->
+  <script src="js/carrito.js" defer></script> <!-- Script del carrito -->
+  <script src="js/validaciones.js" defer></script> <!-- Script de validaciones de formularios -->
+</head>
+
+<body>
+<!-- ENCABEZADO -->
+<header class="topbar"> <!-- Barra superior -->
+  <div class="brand"> <!-- Contenedor de logo + nombre -->
+    <img src="img/logo.png" alt="Logo PetCare" class="logo"> <!-- Logo -->
+    <span class="brand-name">PetCare Connect</span> <!-- Texto de la marca -->
+  </div>
+
+  <!-- Menú de navegación -->
+  <nav class="menu">
+    <a href="index.html">Inicio</a> <!-- Link a la página de inicio -->
+    <a href="productos.html">Productos</a> <!-- Link a productos -->
+    <a href="nosotros.html">Nosotros</a> <!-- Link a nosotros -->
+    <a href="blog.html">Blog</a> <!-- Link al blog -->
+    <a href="contacto.html">Contacto</a> <!-- Link a contacto -->
+    <a href="login.html" class="btn-link">Iniciar Sesión</a> <!-- Link a login -->
+    <a href="registro.html" class="btn-outline">Registrarse</a> <!-- Link a registro -->
+  </nav>
+
+  <!-- Carrito -->
+  <a class="cart-link" href="carrito.html"> <!-- Enlace al carrito -->
+    🛒 <span id="cart-count">0</span> <!-- Ícono del carrito con contador -->
+  </a>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+<section class="formulario"> <!-- Sección con formulario de contacto -->
+  <h2>Formulario de Contacto</h2> <!-- Título de la sección -->
+
+  <!-- Formulario -->
+  <form id="formContacto" novalidate> <!-- novalidate evita validación automática del navegador -->
+
+    <!-- Campo nombre -->
+    <label for="nombreC">Nombre</label>
+    <input id="nombreC" required maxlength="50"> <!-- Input de texto con máximo 50 caracteres -->
+
+    <!-- Campo correo -->
+    <label for="correoC">Correo</label>
+    <input id="correoC" type="email" required maxlength="100"> <!-- Input de tipo email -->
+
+    <!-- Campo mensaje -->
+    <label for="mensajeC">Mensaje</label>
+    <textarea id="mensajeC" required minlength="10" rows="5" placeholder="Escribe tu consulta..."></textarea> 
+    <!-- Área de texto más grande con mínimo 10 caracteres -->
+
+    <!-- Mensajes de ayuda o error -->
+    <div class="form-help" id="contactoHelp"></div>
+
+    <!-- Botón de envío -->
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+</main>
+
+<!-- PIE DE PÁGINA -->
+<footer class="site-footer"> <!-- Pie de página -->
+  © 2025 PetCare Connect — Proyecto Académico DUOC UC
+</footer>
+</body>
+</html>

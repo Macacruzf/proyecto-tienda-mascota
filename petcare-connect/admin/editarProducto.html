@@ -1,0 +1,63 @@
+<!DOCTYPE html> <!-- Documento en HTML5 -->
+<html lang="es"> <!-- Idioma español -->
+<head>
+  <meta charset="UTF-8"> <!-- Soporte para ñ, tildes y caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Adaptable a móviles -->
+  <title>Editar Producto - Admin</title> <!-- Título de la pestaña -->
+
+  <!-- Estilos generales -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Script admin.js: maneja CRUD de productos/usuarios -->
+  <script src="../js/admin.js" defer></script>
+  <!-- ⚡ "defer" asegura que el JS se ejecute solo cuando el HTML ya cargó -->
+</head>
+
+<!-- Clase "admin" = página del panel administrativo -->
+<body class="admin">
+
+<!-- HEADER del panel -->
+<header class="adminbar">
+  <h1>Panel de Administración</h1>
+  <nav>
+    <a href="inicio.html">Inicio</a> <!-- Página principal del panel -->
+    <a href="productos.html">Productos</a> <!-- Lista de productos -->
+    <a href="usuarios.html">Usuarios</a> <!-- Lista de usuarios -->
+    <a href="../index.html">Tienda</a> <!-- Vuelve a la tienda pública -->
+  </nav>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+<section class="formulario"> <!-- Caja blanca con estilo de formulario -->
+  <h2>Editar Producto</h2>
+
+  <!-- Formulario de edición -->
+  <form id="formEditarProducto">
+    <!-- Campo oculto: ID del producto que se está editando -->
+    <input type="hidden" id="epId">
+
+    <!-- Campo Nombre -->
+    <label>Nombre</label>
+    <input id="epNombre" required>
+
+    <!-- Campo Precio -->
+    <label>Precio</label>
+    <input id="epPrecio" type="number" min="0" required> <!-- Solo números, mínimo 0 -->
+
+    <!-- Campo Imagen -->
+    <label>Imagen (ruta)</label>
+    <input id="epImagen">
+
+    <!-- Botón para guardar cambios -->
+    <button type="submit">Actualizar</button>
+  </form>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  © 2025 PetCare Connect — Admin
+</footer>
+</body>
+</html>

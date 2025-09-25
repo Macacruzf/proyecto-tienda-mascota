@@ -1,0 +1,64 @@
+<!DOCTYPE html> <!-- Indica que es un documento HTML5 -->
+<html lang="es"> <!-- Documento en idioma español -->
+<head>
+  <meta charset="UTF-8"> <!-- Permite usar caracteres como ñ y tildes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Hace la página responsive en móviles -->
+  <title>Detalle perritovacu - PetCare Connect</title> <!-- Título de la pestaña en el navegador -->
+
+  <!-- Archivo de estilos -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Archivos JavaScript -->
+  <script src="js/carrito.js" defer></script> <!-- Script para el carrito -->
+  <script src="js/validaciones.js" defer></script> <!-- Script para validaciones de formularios -->
+</head>
+
+<body>
+<!-- ENCABEZADO -->
+<header class="topbar"> <!-- Barra superior -->
+  <div class="brand"> <!-- Contenedor con logo y nombre -->
+    <img src="img/logo.png" alt="Logo PetCare" class="logo"> <!-- Logo de la tienda -->
+    <span class="brand-name">PetCare Connect</span> <!-- Texto de la marca -->
+  </div>
+
+  <!-- Menú de navegación -->
+  <nav class="menu">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="blog.html">Blog</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="login.html" class="btn-link">Iniciar Sesión</a>
+    <a href="registro.html" class="btn-outline">Registrarse</a>
+  </nav>
+
+  <!-- Carrito -->
+  <a class="cart-link" href="carrito.html"> <!-- Enlace al carrito -->
+    🛒 <span id="cart-count">0</span> <!-- Icono del carrito + contador -->
+  </a>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+  <!-- ARTÍCULO DEL BLOG -->
+  <article class="blog-detalle"> <!-- Cada entrada de blog puede ir en un <article> -->
+    <h2>Importancia de las vacunas</h2> <!-- Título del artículo -->
+    <img src="img/perritovacu.jpg" alt="Vacunas para mascotas"> <!-- Imagen asociada al tema -->
+    
+    <!-- Texto principal -->
+    <p>
+      Las vacunas previenen enfermedades graves como parvovirus, moquillo o rabia. 
+      Sigue el calendario recomendado por tu veterinario y evita riesgos innecesarios.
+    </p>
+    <p>
+      La prevención es la mejor inversión en salud para tu compañero.
+    </p>
+  </article>
+</main>
+
+<!-- PIE DE PÁGINA -->
+<footer class="site-footer"> <!-- Pie de página -->
+  © 2025 PetCare Connect — Proyecto Académico DUOC UC
+</footer>
+</body>
+</html>

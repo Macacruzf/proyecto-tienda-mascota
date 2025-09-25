@@ -1,0 +1,155 @@
+<!DOCTYPE html> <!-- Documento en HTML5 -->
+<html lang="es"> <!-- Idioma de la página -->
+<head>
+  <meta charset="UTF-8"> <!-- Soporte para ñ y tildes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Diseño responsive -->
+  <title>Productos - PetCare Connect</title> <!-- Texto que aparece en la pestaña del navegador -->
+
+  <!-- Archivo de estilos (CSS) -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Archivos de scripts (JS) -->
+  <script src="js/carrito.js" defer></script> <!-- Maneja el carrito de compras -->
+  <script src="js/validaciones.js" defer></script> <!-- Maneja validaciones de formularios -->
+</head>
+<body>
+  <!-- HEADER (encabezado superior con logo, menú y carrito) -->
+  <header class="topbar">
+    <div class="brand"> <!-- Contenedor del logo + nombre -->
+      <img src="img/logo.png" alt="Logo PetCare" class="logo"> <!-- Logo -->
+      <span class="brand-name">PetCare Connect</span> <!-- Nombre de la tienda -->
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav class="menu">
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="blog.html">Blog</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="login.html" class="btn-link">Iniciar Sesión</a>
+      <a href="registro.html" class="btn-outline">Registrarse</a>
+    </nav>
+
+    <!-- Enlace al carrito con contador de productos -->
+    <a class="cart-link" href="carrito.html">🛒 <span id="cart-count">0</span></a>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <!-- Título principal de la página -->
+    <h2 class="title-center">Productos</h2>
+
+    <!-- GRID de productos (estructura en tarjetas) -->
+    <div class="grid-productos">
+
+      <!-- Cada producto se muestra dentro de un <article> -->
+
+      <!-- Producto 1 -->
+      <article class="producto">
+        <img src="img/collar.jpg" alt="Collar de Perro"> <!-- Imagen -->
+        <h3>Collar de Perro</h3> <!-- Nombre -->
+        <p class="price">$5.980</p> <!-- Precio -->
+        <div class="actions"> <!-- Acciones -->
+          <a href="detalleProducto.html?id=1" class="btn sm">Ver Detalle</a> <!-- Ver detalles -->
+          <button class="sm" onclick="agregarCarrito('Collar de Perro', 5980)">Añadir</button> <!-- Añadir al carrito -->
+        </div>
+      </article>
+
+      <!-- Producto 2 -->
+      <article class="producto">
+        <img src="img/comidagato.jpg" alt="Comida de Gato">
+        <h3>Comida de Gato</h3>
+        <p class="price">$7.970</p>
+        <div class="actions">
+          <a href="detalleProducto.html?id=2" class="btn sm">Ver Detalle</a>
+          <button class="sm" onclick="agregarCarrito('Comida de Gato', 7970)">Añadir</button>
+        </div>
+      </article>
+
+      <!-- Producto 3 -->
+      <article class="producto">
+        <img src="img/juguete.jpg" alt="Juguete para Mascota">
+        <h3>Juguete para Mascota</h3>
+        <p class="price">$9.960</p>
+        <div class="actions">
+          <a href="detalleProducto.html?id=3" class="btn sm">Ver Detalle</a>
+          <button class="sm" onclick="agregarCarrito('Juguete para Mascota', 9960)">Añadir</button>
+        </div>
+      </article>
+
+      <!-- Producto 4 -->
+      <article class="producto">
+        <img src="img/cama.jpg" alt="Cama para Mascota">
+        <h3>Cama para Mascota</h3>
+        <p class="price">$11.950</p>
+        <div class="actions">
+          <a href="detalleProducto.html?id=4" class="btn sm">Ver Detalle</a>
+          <button class="sm" onclick="agregarCarrito('Cama para Mascota', 11950)">Añadir</button>
+        </div>
+      </article>
+
+      <!-- Producto 5 -->
+      <article class="producto">
+        <img src="img/shampo.jpg" alt="Shampoo para Mascota">
+        <h3>Shampoo para Mascota</h3>
+        <p class="price">$13.940</p>
+        <div class="actions">
+          <a href="detalleProducto.html?id=5" class="btn sm">Ver Detalle</a>
+          <button class="sm" onclick="agregarCarrito('Shampoo para Mascota', 13940)">Añadir</button>
+        </div>
+      </article>
+
+      <!-- Producto 6 -->
+      <article class="producto">
+        <img src="img/correa.jpg" alt="Correa para Perro">
+        <h3>Correa para Perro</h3>
+        <p class="price">$15.930</p>
+        <div class="actions">
+          <a href="detalleProducto.html?id=6" class="btn sm">Ver Detalle</a>
+          <button class="sm" onclick="agregarCarrito('Correa para Perro', 15930)">Añadir</button>
+        </div>
+      </article>
+
+      <!-- Producto 7 -->
+      <article class="producto">
+        <img src="img/plato.jpg" alt="Plato para Mascota">
+        <h3>Plato para Mascota</h3>
+        <p class="price">$17.920</p>
+        <div class="actions">
+          <a href="detalleProducto.html?id=7" class="btn sm">Ver Detalle</a>
+          <button class="sm" onclick="agregarCarrito('Plato para Mascota', 17920)">Añadir</button>
+        </div>
+      </article>
+
+      <!-- Producto 8 -->
+      <article class="producto">
+        <img src="img/casagato.jpg" alt="Casita para Gato">
+        <h3>Casita para Gato</h3>
+        <p class="price">$19.910</p>
+        <div class="actions">
+          <a href="detalleProducto.html?id=8" class="btn sm">Ver Detalle</a>
+          <button class="sm" onclick="agregarCarrito('Casita para Gato', 19910)">Añadir</button>
+        </div>
+      </article>
+
+      <!-- Producto 9 -->
+      <article class="producto">
+        <img src="img/arnes.jpg" alt="Arnés para Perro">
+        <h3>Arnés para Perro</h3>
+        <p class="price">$21.900</p>
+        <div class="actions">
+          <a href="detalleProducto.html?id=9" class="btn sm">Ver Detalle</a>
+          <button class="sm" onclick="agregarCarrito('Arnés para Perro', 21900)">Añadir</button>
+        </div>
+      </article>
+
+    </div> <!-- Fin grid-productos -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    © 2025 PetCare Connect — Proyecto Académico DUOC UC
+  </footer>
+</body>
+</html>

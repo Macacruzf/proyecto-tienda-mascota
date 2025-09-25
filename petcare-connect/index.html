@@ -1,0 +1,103 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head>
+  <meta charset="UTF-8"> <!-- Permite usar ñ, tildes y caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Hace la web responsive en móviles -->
+  <title>Inicio - PetCare Connect</title> <!-- Título de la pestaña del navegador -->
+
+  <!-- Archivo de estilos -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Archivos JavaScript -->
+  <script src="js/carrito.js" defer></script> <!-- Maneja el carrito de compras -->
+  <script src="js/validaciones.js" defer></script> <!-- Maneja validaciones de formularios -->
+</head>
+
+<body>
+<!-- ENCABEZADO -->
+<header class="topbar"> <!-- Barra superior -->
+  <div class="brand"> <!-- Contenedor de logo + nombre -->
+    <img src="img/logo.png" alt="Logo PetCare" class="logo"> <!-- Imagen del logo -->
+    <span class="brand-name">PetCare Connect</span> <!-- Nombre de la tienda -->
+  </div>
+
+  <!-- Menú de navegación -->
+  <nav class="menu"> <!-- Links principales -->
+    <a href="index.html">Inicio</a> <!-- Link a inicio -->
+    <a href="productos.html">Productos</a> <!-- Link a productos -->
+    <a href="nosotros.html">Nosotros</a> <!-- Link a nosotros -->
+    <a href="blog.html">Blog</a> <!-- Link a blog -->
+    <a href="contacto.html">Contacto</a> <!-- Link a contacto -->
+    <a href="login.html" class="btn-link">Iniciar Sesión</a> <!-- Link a login -->
+    <a href="registro.html" class="btn-outline">Registrarse</a> <!-- Link a registro -->
+  </nav>
+
+  <!-- Carrito -->
+  <a class="cart-link" href="carrito.html"> <!-- Enlace al carrito -->
+    🛒 <span id="cart-count">0</span> <!-- Ícono carrito + número de productos -->
+  </a>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+
+  <!-- HERO / BANNER PRINCIPAL -->
+  <section class="hero"> <!-- Sección de bienvenida -->
+    <div class="hero-text"> <!-- Texto destacado -->
+      <h1>Tienda para todo lo que necesite para una mascota feliz </h1> <!-- Título principal -->
+      <p>Productos, consejos y un equipo que ama a los animales 🐶🐱</p> <!-- Subtítulo -->
+      <div class="hero-actions"> <!-- Botones de acción -->
+        <a href="productos.html" class="btn">Ver Productos</a> <!-- Botón que lleva a productos -->
+        <a href="registro.html" class="btn-outline">Crear Cuenta</a> <!-- Botón que lleva a registro -->
+      </div>
+    </div>
+    <div class="hero-img" aria-label="Mascotas felices"></div> <!-- Imagen de fondo/banner -->
+  </section>
+
+  <!-- PRODUCTOS DESTACADOS -->
+  <section class="destacados"> <!-- Sección con productos destacados -->
+    <h2 class="title-center">Destacados</h2> <!-- Título de la sección -->
+    <div class="grid-productos"> <!-- Contenedor tipo grid (rejilla) -->
+
+      <!-- Producto destacado 1 -->
+      <article class="producto"> <!-- Cada producto va en un <article> -->
+        <img src="img/collar.jpg" alt="Collar para Perro"> <!-- Imagen -->
+        <h3>Collar para Perro</h3> <!-- Nombre del producto -->
+        <p class="price">$9.990</p> <!-- Precio -->
+        <div class="actions"> <!-- Acciones del producto -->
+          <a href="detalleProducto.html?id=1" class="btn sm">Ver Detalle</a> <!-- Link a detalle -->
+          <button class="sm" onclick="agregarCarrito('Collar para Perro', 9990)">Añadir</button> <!-- Botón para agregar al carrito -->
+        </div>
+      </article>
+
+      <!-- Producto destacado 2 -->
+      <article class="producto">
+        <img src="img/comidagato.jpg" alt="Alimento Premium Gato">
+        <h3>Alimento Premium Gato</h3>
+        <p class="price">$15.990</p>
+        <div class="actions">
+          <a href="detalleProducto.html?id=2" class="btn sm">Ver Detalle</a>
+          <button class="sm" onclick="agregarCarrito('Alimento Premium Gato', 15990)">Añadir</button>
+        </div>
+      </article>
+
+      <!-- Producto destacado 3 -->
+      <article class="producto">
+        <img src="img/juguete.jpg" alt="Juguete Mascota">
+        <h3>Juguete Mascota</h3>
+        <p class="price">$5.990</p>
+        <div class="actions">
+          <a href="detalleProducto.html?id=3" class="btn sm">Ver Detalle</a>
+          <button class="sm" onclick="agregarCarrito('Juguete Mascota', 5990)">Añadir</button>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<!-- PIE DE PÁGINA -->
+<footer class="site-footer"> <!-- Pie de página -->
+  © 2025 PetCare Connect — Proyecto Académico DUOC UC
+</footer>
+</body>
+</html>

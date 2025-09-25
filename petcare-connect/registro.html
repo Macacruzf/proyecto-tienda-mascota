@@ -1,0 +1,105 @@
+<!DOCTYPE html> <!-- Indica que el documento es HTML5 -->
+<html lang="es"> <!-- Documento en español -->
+<head>
+  <meta charset="UTF-8"> <!-- Configuración de caracteres, permite ñ y tildes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Para que sea responsive en celulares -->
+  <title>Registro - PetCare Connect</title> <!-- Título que aparece en la pestaña del navegador -->
+  
+  <!-- Enlace al archivo de estilos CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Scripts de JavaScript: funcionalidades -->
+  <script src="js/carrito.js" defer></script> <!-- Maneja el carrito (aunque aquí no se usa directamente) -->
+  <script src="js/validaciones.js" defer></script> <!-- Validaciones del formulario de registro -->
+</head>
+
+<body>
+<!-- Encabezado superior -->
+<header class="topbar">
+  <div class="brand">
+    <img src="img/logo.png" alt="Logo PetCare" class="logo"> <!-- Logo de la página -->
+    <span class="brand-name">PetCare Connect</span> <!-- Nombre de la marca -->
+  </div>
+
+  <!-- Menú de navegación -->
+  <nav class="menu">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="blog.html">Blog</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="login.html" class="btn-link">Iniciar Sesión</a>
+    <a href="registro.html" class="btn-outline">Registrarse</a>
+  </nav>
+
+  <!-- Link al carrito con contador de productos -->
+  <a class="cart-link" href="carrito.html">🛒 <span id="cart-count">0</span></a>
+</header>
+
+<!-- Contenido principal -->
+<main>
+<section class="formulario"> <!-- Sección para el formulario de registro -->
+  <h2>Registro de Usuario</h2>
+
+  <!-- Formulario con validaciones -->
+  <form id="formRegistro" novalidate> <!-- novalidate evita validación automática del navegador -->
+    
+    <!-- Campo nombre -->
+    <label for="nombre">Nombre completo</label>
+    <input id="nombre" required maxlength="100" autocomplete="name">
+
+    <!-- Campo correo -->
+    <label for="correo">Correo</label>
+    <input id="correo" type="email" required maxlength="100" autocomplete="email" placeholder="nombre@duoc.cl">
+
+    <!-- Confirmación correo -->
+    <label for="correo2">Confirmar correo</label>
+    <input id="correo2" type="email" required maxlength="100">
+
+    <!-- Contraseña -->
+    <label for="password">Contraseña (4 a 10 caracteres)</label>
+    <input id="password" type="password" required minlength="4" maxlength="10" autocomplete="new-password">
+
+    <!-- Confirmación contraseña -->
+    <label for="password2">Confirmar contraseña</label>
+    <input id="password2" type="password" required minlength="4" maxlength="10">
+
+    <!-- Teléfono (opcional) -->
+    <label for="telefono">Teléfono (opcional)</label>
+    <input id="telefono" type="tel" autocomplete="tel">
+    
+    <!-- Región -->
+    <label for="region">Región</label>
+    <select id="region" required>
+      <option value="">-- Seleccione --</option>
+      <option>Región Metropolitana</option>
+      <option>Valparaíso</option>
+      <option>Biobío</option>
+      <option>La Araucanía</option>
+    </select>
+
+    <!-- Comuna -->
+    <label for="comuna">Comuna</label>
+    <select id="comuna" required>
+      <option value="">-- Seleccione --</option>
+      <option>Santiago</option>
+      <option>Ñuñoa</option>
+      <option>Concepción</option>
+      <option>Temuco</option>
+    </select>
+
+    <!-- Aquí se muestran mensajes de ayuda o error -->
+    <div class="form-help" id="registroHelp"></div>
+
+    <!-- Botón para enviar el formulario -->
+    <button type="submit">Registrar</button>
+  </form>
+</section>
+</main>
+
+<!-- Pie de página -->
+<footer class="site-footer">
+  © 2025 PetCare Connect — Proyecto Académico DUOC UC
+</footer>
+</body>
+</html>
