@@ -10,11 +10,11 @@ function setHelp(form, txt){
   if(help){ help.textContent = txt || ''; } // Inserta el texto (si txt está vacío borra el mensaje)
 }
 
-// ===================================================
-//  Funciones para manejar clientes en LocalStorage
-// ===================================================
+// ====================================
+//  Funciones para manejar clientes 
+// ====================================
 function guardarCliente(nombre, correo, pass){
-  let clientes = JSON.parse(localStorage.getItem('clientes')) || [];
+  let clientes = JSON.parse(localStorage.getItem('clientes')) || []; //localStorage guarda informacion
 
   // Normalizamos el correo
   correo = correo.trim().toLowerCase();
@@ -30,7 +30,7 @@ function guardarCliente(nombre, correo, pass){
 }
 
 function buscarCliente(correo, pass){
-  let clientes = JSON.parse(localStorage.getItem('clientes')) || [];
+  let clientes = JSON.parse(localStorage.getItem('clientes')) || [];//localStorage guarda informacion
   
   // Normalizamos el correo ingresado
   correo = correo.trim().toLowerCase();

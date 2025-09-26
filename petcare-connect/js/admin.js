@@ -1,7 +1,7 @@
 /* ---------------------------
    Funciones base
 ---------------------------- */
-// ✅ Verifica que el usuario tenga rol de administrador
+//  Verifica que el usuario tenga rol de administrador
 function requireAdmin(){ 
   const rol = sessionStorage.getItem('rol'); 
   if(rol !== 'admin'){ // si no es admin
@@ -9,12 +9,12 @@ function requireAdmin(){
   }
 }
 
-// ✅ Lee un valor desde localStorage
+// Lee un valor desde localStorage
 function getLS(k){ 
   return JSON.parse(localStorage.getItem(k) || '[]'); 
 }
 
-// ✅ Guarda un valor en localStorage
+// Guarda un valor en localStorage
 function setLS(k,v){ 
   localStorage.setItem(k, JSON.stringify(v)); 
 }
