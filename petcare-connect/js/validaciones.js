@@ -14,11 +14,15 @@ function setHelp(form, txt){
   if(help){ help.textContent = txt || ''; } // Si existe el contenedor, muestra el mensaje (si txt está vacío, limpia)
 }
 
-// ===================================================
-//  Funciones para manejar clientes en LocalStorage
-// ===================================================
+// ====================================
+//  Funciones para manejar clientes 
+// ====================================
 function guardarCliente(nombre, correo, pass){
+<<<<<<< HEAD
   let clientes = JSON.parse(localStorage.getItem('clientes')) || []; // Obtiene lista guardada o inicializa vacía
+=======
+  let clientes = JSON.parse(localStorage.getItem('clientes')) || []; //localStorage guarda informacion
+>>>>>>> c70a27da29450c790c7a1497750ecd7c26d7c58e
 
   correo = correo.trim().toLowerCase(); // Normaliza el correo (sin espacios y minúsculas)
 
@@ -34,9 +38,18 @@ function guardarCliente(nombre, correo, pass){
 }
 
 function buscarCliente(correo, pass){
+<<<<<<< HEAD
   let clientes = JSON.parse(localStorage.getItem('clientes')) || []; // Obtiene lista guardada
   correo = correo.trim().toLowerCase(); // Normaliza el correo ingresado
   return clientes.find(c => c.correo === correo && c.pass === pass); // Busca cliente con correo y pass iguales
+=======
+  let clientes = JSON.parse(localStorage.getItem('clientes')) || [];//localStorage guarda informacion
+  
+  // Normalizamos el correo ingresado
+  correo = correo.trim().toLowerCase();
+
+  return clientes.find(c => c.correo === correo && c.pass === pass);
+>>>>>>> c70a27da29450c790c7a1497750ecd7c26d7c58e
 }
 
 // ===================================================
