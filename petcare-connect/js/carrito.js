@@ -35,7 +35,7 @@ function agregarCarrito(nombre, precio) {
 
   setCarrito(c); // guarda carrito actualizado
   actualizarBadge(); // actualiza numerito
-  alert(nombre + ' añadido al carrito ✅'); // muestra confirmación
+  toast(nombre + ' añadido al carrito ✅'); // muestra confirmación
 }
 
 /* ---------------------------
@@ -189,3 +189,16 @@ document.addEventListener("DOMContentLoaded", () => {
   renderCarrito();       // si estamos en carrito.html, dibuja la tabla
   renderDetalleProducto(); // si estamos en detalleProducto.html, carga los datos
 });
+
+/* ---------------------------
+   Avisos (Toast) muestran mensajes breves y la confirmacion
+---------------------------- */
+function toast(msg){
+  const aviso = document.createElement("div");
+  aviso.textContent = msg;
+  aviso.className = "toast"; 
+  document.body.appendChild(aviso);
+
+  // Desaparece después de 2 segundos
+  setTimeout(()=> aviso.remove(), 2000);
+}

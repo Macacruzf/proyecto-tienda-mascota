@@ -146,29 +146,40 @@ button.sm {
 button.sm:hover {
   background: #f0f0f0; /* Fondo gris claro al pasar */
 }
-
 /* ---------- SECCIONES Y PRODUCTOS ---------- */
 .title-center {
   text-align: center; /* Texto centrado */
-  margin-top: 16px; /* Separación superior */
+  margin-top: 16px;   /* Separación superior */
 }
 
 .grid-productos {
-  display: grid; /* Usa cuadrícula */
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Se adapta al espacio */
-  gap: 18px; /* Espacio entre tarjetas */
-  padding: 16px; /* Espaciado interno */
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adaptable */
+  gap: 18px;         /* Espacio entre tarjetas */
+  padding: 16px;     /* Espaciado interno */
   max-width: 1100px; /* Máximo ancho */
-  margin: 0 auto; /* Centrado */
+  margin: 0 auto;    /* Centrado */
 }
 
 .producto {
-  background: var(--card); /* Fondo blanco */
-  border: 1px solid #e5e7eb; /* Borde gris claro */
-  border-radius: 14px; /* Bordes redondeados */
-  padding: 12px; /* Espaciado interno */
+  background: var(--card);      /* Fondo blanco */
+  border: 1px solid #e5e7eb;    /* Borde gris claro */
+  border-radius: 14px;          /* Bordes redondeados */
+  padding: 12px;                /* Espaciado interno */
   box-shadow: 0 1px 2px rgba(0, 0, 0, .04); /* Sombra suave */
-  text-align: center; /* Texto centrado */
+  text-align: center;           /* Texto centrado */
+
+  /* 👇 NUEVO para que los botones queden abajo */
+  display: flex;                /* Flexbox */
+  flex-direction: column;       /* Elementos en columna */
+  justify-content: space-between; /* Empuja los botones al final */
+  height: 100%;                 /* Ocupar toda la altura */
+}
+
+.producto img {
+  max-height: 180px;   /* Tamaño uniforme para imágenes */
+  object-fit: contain; /* Mantiene proporción sin deformar */
+  margin-bottom: 10px; /* Separación inferior */
 }
 
 .producto h3,
@@ -178,53 +189,55 @@ button.sm:hover {
 
 .price {
   color: var(--green); /* Verde */
-  font-weight: 700; /* Negrita */
+  font-weight: 700;    /* Negrita */
+  margin-bottom: 8px;  /* Un poco de espacio antes de botones */
 }
 
 .actions {
-  display: flex; /* Botones en fila */
-  gap: 8px; /* Espacio entre botones */
-  flex-wrap: wrap; /* Se acomodan si no caben */
+  display: flex;      /* Botones en fila */
+  gap: 8px;           /* Espacio entre botones */
+  flex-wrap: wrap;    /* Se acomodan si no caben */
   justify-content: center; /* Centrado */
+  margin-top: auto;   /* Los empuja hacia abajo */
 }
 
 .detalle-producto {
-  display: grid; /* Cuadrícula */
+  display: grid; 
   grid-template-columns: 1fr 1fr; /* Imagen + info */
-  gap: 24px; /* Espacio */
-  max-width: 1000px; /* Máximo ancho */
-  margin: 16px auto; /* Separación y centrado */
-  padding: 0 16px; /* Espaciado horizontal */
+  gap: 24px; 
+  max-width: 1000px; 
+  margin: 16px auto; 
+  padding: 0 16px;
 }
 
 .miniaturas {
-  display: flex; /* En fila */
-  gap: 8px; /* Espacio entre imágenes */
-  margin-top: 8px; /* Separación superior */
+  display: flex; 
+  gap: 8px; 
+  margin-top: 8px;
 }
 
 .detalle-info input {
-  width: 120px; /* Ancho fijo */
+  width: 120px;
 }
 
 /* ---------- PRODUCTOS RELACIONADOS ---------- */
 .relacionados {
-  max-width: 1100px; /* Máximo ancho */
-  margin: 32px auto; /* Separación y centrado */
-  padding: 0 16px; /* Espaciado horizontal */
+  max-width: 1100px;
+  margin: 32px auto;
+  padding: 0 16px;
 }
 
 .relacionados h3 {
-  margin-bottom: 16px; /* Separación inferior */
-  font-size: 1.6rem; /* Tamaño de letra */
-  color: var(--text); /* Color texto */
-  text-align: center; /* Centrado */
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+  color: var(--text);
+  text-align: center;
 }
 
 .relacionados .grid-productos {
-  display: grid; /* Cuadrícula */
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adaptable */
-  gap: 18px; /* Espacio */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
 }
 
 /* ---------- FORMULARIOS ---------- */
@@ -397,3 +410,29 @@ button.sm:hover {
 .toolbar {
   margin: 8px 0; /* Separación vertical */
 }
+
+/* ---------- TOAST ---------- */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--green);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  font-size: 14px;
+  z-index: 9999;
+  animation: fadein 0.3s, fadeout 0.3s 1.7s;
+}
+
+@keyframes fadein {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeout {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
